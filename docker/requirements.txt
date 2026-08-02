@@ -1,0 +1,4 @@
+# TensorFlow CPU for general ML / model prep (Edge TPU uses TFLite via PyCoral)
+tensorflow==2.13.1
+Pillow>=9.0.0,<11
+numpy>=1.21.0,<1.25

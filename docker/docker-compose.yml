@@ -1,0 +1,17 @@
+services:
+  coral:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: coral-tpu:latest
+    container_name: coral-tpu
+    privileged: true
+    devices:
+      - /dev/bus/usb:/dev/bus/usb
+    volumes:
+      # Monta la raíz del repo (padre de docker/) en /workspace
+      - ..:/workspace
+    working_dir: /workspace
+    stdin_open: true
+    tty: true
+    command: bash
